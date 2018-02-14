@@ -9,8 +9,10 @@
 		
 
 		<div id="app">
+			<h1>{{ sayHello() }} </h1>
 			<input type="text" v-on:input="changeTitle">
-			<p>{{ title }}</p>
+			<p>{{ title }} - <a v-bind:href="link" target="_blank">Google</a></p>
+
 		</div>
 	</body>
 </html>
