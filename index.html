@@ -14,6 +14,9 @@
 			<p>{{ sayHello() }} - <a v-bind:href="link" target="_blank">Google</a></p>
 			<hr>
 			<p v-html="finishedLink"></p>
+			<hr>
+			<button v-on:click="increaseCounter">Click me</button>
+			<p>Times clicked — {{ counter }}</p>
 		</div>
 	</body>
 </html>
