@@ -15,8 +15,10 @@
 			<hr>
 			<p v-html="finishedLink"></p>
 			<hr>
-			<button v-on:click="increaseCounter">Click me</button>
+			<button v-on:click="increaseCounter(4, $event)">Click me</button>
 			<p>Times clicked — {{ counter }}</p>
+			<p v-on:mousemove="updateCoordinates">Coordinates — {{ x }} / {{ y }} — <span v-on:mousemove.stop="">DEAD SPOT</span></p>
+			<input type="text" v-on:keyup.enter.space="alertMe">
 		</div>
 	</body>
 </html>

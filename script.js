@@ -5,7 +5,9 @@ new Vue({
 		link: 'http://google.com',
 		label: 'Input',
 		finishedLink: '<a href="https://github.com" target="_blank">Github</a>',
-		counter: 0
+		counter: 0,
+		x: 0,
+		y: 0
 	},
 	methods: {
 		changeTitle: function(event) {
@@ -15,8 +17,15 @@ new Vue({
 			this.title = 'Hello';
 			return this.title;
 		},
-		increaseCounter: function() {
-			this.counter++;
+		increaseCounter: function(step, event) {
+			this.counter += step;
+		},
+		updateCoordinates: function(event) {
+			this.x = event.clientX;
+			this.y = event.clientY;
+		},
+		alertMe: function() {
+			alert('Alert!');
 		}
 	}
 });
