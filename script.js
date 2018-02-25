@@ -6,6 +6,7 @@ new Vue({
 		label: 'Input',
 		finishedLink: '<a href="https://github.com" target="_blank">Github</a>',
 		counter: 0,
+		name: 'Dante',
 		x: 0,
 		y: 0
 	},
