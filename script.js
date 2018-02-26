@@ -28,5 +28,10 @@ new Vue({
 		alertMe: function() {
 			alert('Alert!');
 		}
+	},
+	computed: {
+		output: function() {
+			return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5'
+		}
 	}
 });
