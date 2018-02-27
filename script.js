@@ -33,5 +33,13 @@ new Vue({
 		output: function() {
 			return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5'
 		}
+	},
+	watch: {
+		counter: function(value) {
+			var vm = this;
+			setTimeout(function() {
+				vm.counter = 0;
+			}, 2000);
+		}
 	}
 });
