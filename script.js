@@ -8,7 +8,10 @@ new Vue({
 		counter: 0,
 		name: 'Dante',
 		x: 0,
-		y: 0
+		y: 0,
+		attachRed: false,
+		attachGreen: false,
+		attachBlue: false
 	},
 	methods: {
 		changeTitle: function(event) {
