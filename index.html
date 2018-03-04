@@ -26,9 +26,11 @@
 			<input type="text" v-model="name">
 			<p>{{ name }}</p>
 			<hr>
-			<div class="demo" @click="attachRed = !attachRed" :class="{red: attachRed}"></div>
+			<div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
 			<div class="demo" @click="attachGreen = !attachGreen" :class="{green: attachGreen}"></div>
-			<div class="demo" @click="attachBlue = !attachBlue" :class="{blue: attachBlue}"></div>
+			<div class="demo" @click="attachBlue = !attachBlue" :class="[color, {red: attachRed}]"></div>
+			<hr>
+			<input type="text" v-model="color">
 		</div>
 	</body>
 </html>

@@ -11,7 +11,8 @@ new Vue({
 		y: 0,
 		attachRed: false,
 		attachGreen: false,
-		attachBlue: false
+		attachBlue: false,
+		color: 'green'
 	},
 	methods: {
 		changeTitle: function(event) {
@@ -35,6 +36,12 @@ new Vue({
 	computed: {
 		output: function() {
 			return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5'
+		},
+		divClasses: function() {
+			return {
+				red: this.attachRed,
+				blue: !this.attachRed
+			}
 		}
 	},
 	watch: {
