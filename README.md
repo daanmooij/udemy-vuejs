@@ -1,4 +1,4 @@
-# vuejs2-udemy
+# Udemy - Vue JS 2
 
 This repo contains the exercises I made for the following Udemy course:
 
