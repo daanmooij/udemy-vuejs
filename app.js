@@ -1,6 +1,18 @@
 new Vue({
 	el: '#app',
 	data: {
+		title: 'Hello World!'
+	},
+	methods: {
+		changeTitle: function() {
+			this.title = event.target.value;
+		}
+	}
+});
+
+new Vue({
+	el: '#sandbox',
+	data: {
 		title: 'CANVAS',
 		link: 'http://google.com',
 		label: 'Input',
