@@ -3,11 +3,16 @@
 	<head>
 		<title>Vuejs2 - Udemy</title>
 		<script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js" defer></script>
-		<script type="text/javascript" src="script.js" defer></script>
+		<script type="text/javascript" src="app.js" defer></script>
 		<link rel="stylesheet" type="text/css" href="style.css"> 
 	</head>
 	<body>
 		<div id="app">
+			<input type="text" v-on:input="changeTitle">
+			<h1>{{title}}</h1>
+		</div>
+
+		<div id="sandbox">
 			<h1 v-once>{{ title }}</h1>
 			<span>{{ label }}: </span>
 			<input type="text" @input="changeTitle">
