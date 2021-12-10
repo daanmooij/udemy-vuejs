@@ -1,28 +1,21 @@
-Vue.createApp({
+const app = Vue.createApp({
   data() {
     return {
-      goals: [],
-      enteredValue: "",
+      courseGoalA: 'Finish the course',
+      courseGoalB: 'Master Vue',
+      vueLink: 'https://vuejs.org/',
     };
   },
   methods: {
-    addGoal() {
-      this.goals.push(this.enteredValue);
-      this.enteredValue = "";
+    outputGoal() {
+      const randomNumber = Math.random();
+      if (randomNumber < 0.5) {
+        return this.courseGoalA;
+      } else {
+        return this.courseGoalB;
+      }
     },
   },
-}).mount("#app");
+});
 
-// const buttonElement = document.querySelector('button');
-// const inputElement = document.querySelector('input');
-// const listElement = document.querySelector('ul');
-
-// function addGoal() {
-//     const enteredValue = inputElement.value;
-//     const listItemElement = document.createElement('li');
-//     listItemElement.textContent = enteredValue;
-//     listElement.appendChild(listItemElement);
-//     inputElement.value = '';
-// }
-
-// buttonElement.addEventListener('click', addGoal);
+app.mount('#user-goal');
